@@ -1,0 +1,34 @@
+# ⚠️ CRITICAL: Private Keys (NEVER upload!)
+*.pem
+release.pem
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Archive Files
+*.rar
+*.7z
+
+# Build folders (generated - not uploaded to Git)
+release/
+dist/
+
+# Build scripts (local only)
+pack-extension.ps1
