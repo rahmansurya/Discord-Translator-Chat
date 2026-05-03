@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 320px;
+      background: #1e1f22;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #dbdee1;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    .header {
+      text-align: center;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .header h3 {
+      color: #5865f2;
+      font-size: 18px;
+    }
+
+    .header p {
+      font-size: 12px;
+      color: #b5bac1;
+      margin-top: 4px;
+    }
+
+    .setting-group {
+      margin-bottom: 20px;
+    }
+
+    .setting-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .setting-desc {
+      font-size: 11px;
+      color: #80848e;
+      margin-top: 2px;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px 12px;
+      background: #111214;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      color: #dbdee1;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    select:hover {
+      border-color: #5865f2;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #2b2d31;
+      transition: 0.3s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.3s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #5865f2;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+
+    .lang-row {
+      margin-bottom: 16px;
+    }
+
+    .lang-row label {
+      display: block;
+      font-size: 12px;
+      color: #b5bac1;
+      margin-bottom: 4px;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+      margin: 16px 0;
+    }
+
+    .more-settings {
+      background: #111214;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 12px;
+    }
+
+    .more-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .more-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .more-item span {
+      font-size: 12px;
+    }
+
+    .save-btn {
+      width: 100%;
+      padding: 10px;
+      background: #5865f2;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 16px;
+      transition: 0.2s;
+    }
+
+    .save-btn:hover {
+      background: #4752c4;
+    }
+
+    .status {
+      text-align: center;
+      font-size: 11px;
+      color: #80848e;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h3>🌐 Penterjemah Chat</h3>
+      <p>Discord Simple Translator</p>
+    </div>
+
+    <div class="setting-group">
+      <div class="setting-label">
+        <span>🔘 Translation Switch</span>
+        <label class="switch">
+          <input type="checkbox" id="enableSwitch">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="setting-desc">Nyalakan/matikan terjemahan otomatis</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="lang-row">
+      <label>📖 Your Language (Source)</label>
+      <select id="sourceLang">
+        <option value="auto">🌍 Automatic (Detect)</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="id">🇮🇩 Indonesia</option>
+        <option value="ms">🇲🇾 Malay</option>
+        <option value="zh">🇨🇳 中文</option>
+        <option value="ja">🇯🇵 日本語</option>
+        <option value="ko">🇰🇷 한국어</option>
+        <option value="es">🇪🇸 Español</option>
+        <option value="fr">🇫🇷 Français</option>
+        <option value="de">🇩🇪 Deutsch</option>
+        <option value="ar">🇸🇦 العربية</option>
+        <option value="hi">🇮🇳 हिन्दी</option>
+        <option value="ru">🇷🇺 Русский</option>
+        <option value="it">🇮🇹 Italiano</option>
+        <option value="pt">🇵🇹 Português</option>
+        <option value="nl">🇳🇱 Nederlands</option>
+        <option value="tr">🇹🇷 Türkçe</option>
+        <option value="th">🇹🇭 ไทย</option>
+        <option value="vi">🇻🇳 Tiếng Việt</option>
+      </select>
+    </div>
+
+    <div class="lang-row">
+      <label>💬 Contact Language (Target)</label>
+      <select id="targetLang">
+        <option value="id">🇮🇩 Indonesia</option>
+        <option value="en">🇬🇧 English</option>
+        <option value="ms">🇲🇾 Malay</option>
+        <option value="zh">🇨🇳 中文</option>
+        <option value="ja">🇯🇵 日本語</option>
+        <option value="ko">🇰🇷 한국어</option>
+        <option value="es">🇪🇸 Español</option>
+        <option value="fr">🇫🇷 Français</option>
+        <option value="de">🇩🇪 Deutsch</option>
+        <option value="ar">🇸🇦 العربية</option>
+        <option value="hi">🇮🇳 हिन्दी</option>
+        <option value="ru">🇷🇺 Русский</option>
+        <option value="it">🇮🇹 Italiano</option>
+        <option value="pt">🇵🇹 Português</option>
+        <option value="nl">🇳🇱 Nederlands</option>
+        <option value="tr">🇹🇷 Türkçe</option>
+        <option value="th">🇹🇭 ไทย</option>
+        <option value="vi">🇻🇳 Tiếng Việt</option>
+      </select>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="more-settings">
+      <div class="more-item">
+        <span>⚡ Auto Translate New Messages</span>
+        <label class="switch">
+          <input type="checkbox" id="autoTranslate" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="more-item">
+        <span>🔔 Show Translation Notification</span>
+        <label class="switch">
+          <input type="checkbox" id="showNotify">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="more-item">
+        <span>🔘 Show Manual Translate Button</span>
+        <label class="switch">
+          <input type="checkbox" id="showManualBtn" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="setting-desc" style="margin-top: -8px; margin-bottom: 12px;">
+        Untuk pesan reply/quote yang tidak terdeteksi auto
+      </div>
+    </div>
+
+    <button class="save-btn" id="saveBtn">💾 Save Settings</button>
+    <div class="status">
+      ✅ Extension aktif | v2.0
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

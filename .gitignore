@@ -1,0 +1,33 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Archive Files
+*.zip
+*.rar
+*.7z
+
+# Chrome Extension Package
+*.pem
+
+# Release folder (generated)
+release/
+
+# Build scripts
+pack-extension.ps1
