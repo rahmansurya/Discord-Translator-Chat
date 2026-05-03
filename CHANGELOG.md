@@ -5,10 +5,7 @@ Semua perubahan penting pada Discord Chat Translator.
 ## [2.0.0] - 2026-05-03
 
 [+] **Ditambahkan**
-- Tombol terjemahan manual (🌐) di setiap pesan
-- Dukungan penuh pesan reply/quote
-- Toggle tampilan tombol manual
-- Visual feedback status terjemahan
+- Tombol terjemahan manual
 
 [-] **Diperbaiki**
 - Bug teks reply yang ikut diterjemahkan
@@ -19,7 +16,6 @@ Semua perubahan penting pada Discord Chat Translator.
 [\] **Diubah**
 - Interval scan diubah menjadi 10 detik (lebih ringan)
 - Optimalisasi kode dan performa
-- Sistem tracking ID pesan lebih stabil
 
 ## [1.0.0] - 2026-04-20
 
