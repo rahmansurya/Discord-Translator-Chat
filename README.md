@@ -1,4 +1,4 @@
-# 🌐 Discord Translator Chat
+# Discord Translator Chat
 
 Extension Chrome untuk menerjemahkan chat Discord secara otomatis ke berbagai bahasa dengan dukungan terjemahan manual untuk pesan reply/quote.
 
@@ -16,8 +16,6 @@ Extension Chrome untuk menerjemahkan chat Discord secara otomatis ke berbagai ba
 - 💾 **Persistent Settings**: Pengaturan tersimpan secara otomatis
 - 🔁 **Support Reply Messages**: Deteksi dan terjemahkan pesan reply dengan benar
 
-## 📸 Screenshot
-
 ### Panel Pengaturan
 Extension menyediakan panel pengaturan yang mudah digunakan dengan fitur:
 - Translation Switch (on/off)
@@ -25,9 +23,6 @@ Extension menyediakan panel pengaturan yang mudah digunakan dengan fitur:
 - Pilihan bahasa target
 - Opsi auto-translate
 - Tombol manual translate untuk pesan reply
-
-### Hasil Terjemahan
-Terjemahan muncul di bawah pesan asli dengan gaya yang menyatu dengan tema Discord.
 
 ## 🚀 Instalasi
 
@@ -133,22 +128,6 @@ Discord-Translator-Chat/
 - Google Chrome Browser
 - Text Editor (VS Code recommended)
 
-### Setup Development Environment
-
-1. Clone repository
-   ```bash
-   git clone https://github.com/username/Discord-Translator-Chat.git
-   cd Discord-Translator-Chat
-   ```
-
-2. Make changes to files
-
-3. Reload extension:
-   - Go to `chrome://extensions/`
-   - Click reload button on the extension card
-
-4. Test on Discord
-
 ## 🐛 Known Issues & Limitations
 
 1. **Rate Limiting**: Google Translate API mungkin membatasi request berlebihan
@@ -171,33 +150,12 @@ Discord-Translator-Chat/
 - ✅ Settings panel
 - ✅ Basic functionality
 
-## 🤝 Contributing
-
-Kontribusi sangat diterima! Silakan:
-
-1. Fork repository
-2. Buat branch baru (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Buat Pull Request
-
 ## 📝 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-## 👤 Author
-
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
 
 ## 🙏 Acknowledgments
 
 - Google Translate API untuk layanan terjemahan
 - Discord untuk platform chat
 - Chrome Extension API documentation
-
-## ⭐ Star History
-
-Jika extension ini membantu, jangan lupa kasih star ⭐
-
----
