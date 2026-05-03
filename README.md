@@ -196,16 +196,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - Discord untuk platform chat
 - Chrome Extension API documentation
 
-## 📞 Support
-
-Jika ada masalah atau pertanyaan:
-- **Issue Tracker**: [GitHub Issues](https://github.com/username/Discord-Translator-Chat/issues)
-- **Email**: your.email@example.com
-
 ## ⭐ Star History
 
 Jika extension ini membantu, jangan lupa kasih star ⭐
 
 ---
-
-**Made with ❤️ for Discord Community**
