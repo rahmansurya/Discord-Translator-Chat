@@ -17,12 +17,10 @@ Extension Chrome untuk menerjemahkan chat Discord secara otomatis ke berbagai ba
 - **UI yang Bersih**: Desain terjemahan yang rapi dan mudah dibaca
 
 ### Panel Pengaturan
-Extension menyediakan panel pengaturan yang mudah digunakan dengan fitur:
-- Translation Switch (on/off)
-- Pilihan bahasa sumber (auto-detect atau manual)
-- Pilihan bahasa target
-- Opsi auto-translate
-- Tombol manual translate untuk pesan reply
+Extension menyediakan panel pengaturan sederhana dengan fitur:
+- Switch untuk mengaktifkan/menonaktifkan terjemahan
+- Pilihan bahasa sumber (auto detect atau manual)
+- Pilihan bahasa tujuan
 
 ## Instalasi
 
@@ -30,74 +28,35 @@ Extension menyediakan panel pengaturan yang mudah digunakan dengan fitur:
 *Coming soon...*
 
 ### Metode 2: Install Manual (Developer Mode)
-1. **Download Extension**
-   ```bash
-   git clone https://github.com/username/Discord-Translator-Chat.git
-   ```
-   atau download ZIP dari GitHub
+1. Download repository ini atau ambil file ZIP dari GitHub
+2. Buka Chrome dan masuk ke halaman `chrome://extensions/`
+3. Aktifkan **Developer mode** di pojok kanan atas
+4. Klik tombol **Load unpacked**
+5. Pilih folder ekstensi
+6. Extension siap digunakan di Discord Web
 
-2. **Buka Chrome Extensions**
-   - Ketik di address bar: `chrome://extensions/`
-   - Atau Menu → More Tools → Extensions
+## Cara Penggunaan
+1. Buka Discord di browser Chrome (`discord.com`)
+2. Klik ikon extension di toolbar Chrome
+3. Atur pengaturan sesuai kebutuhan:
+   - Aktifkan Translation Switch
+   - Pilih bahasa sumber (disarankan menggunakan Auto Detect)
+   - Pilih bahasa tujuan (default: Indonesia)
+4. Simpan pengaturan
+5. Refresh halaman Discord
+Extension akan secara otomatis menerjemahkan pesan baru. Untuk pesan reply atau quote, gunakan tombol terjemahan manual jika diperlukan.
 
-3. **Enable Developer Mode**
-   - Toggle "Developer mode" di pojok kanan atas
-
-4. **Load Extension**
-   - Klik "Load unpacked"
-   - Pilih folder `Discord-Translator-Chat`
-   - Extension siap digunakan!
-
-## 📖 Cara Penggunaan
-
-### Setup Awal
-
-1. **Buka Discord** di browser Chrome
-2. **Klik icon extension** di toolbar
-3. **Atur pengaturan**:
-   - **Translation Switch**: Aktifkan terjemahan
-   - **Your Language (Source)**: Pilih bahasa sumber atau "Auto Detect"
-   - **Contact Language (Target)**: Pilih bahasa tujuan (default: Indonesia)
-4. **Klik "Save Settings"**
-5. **Refresh halaman Discord** untuk mengaktifkan
-
-### Terjemahan Otomatis
-
-- Extension akan **otomatis menerjemahkan** pesan baru yang muncul
-- Hasil terjemahan muncul di bawah pesan asli
-- Hanya pesan yang berbeda bahasa yang diterjemahkan
+## Teknologi yang Digunakan
+- Manifest V3
+- Google Translate API
+- MutationObserver untuk deteksi pesan real-time
+- Chrome Storage API untuk menyimpan pengaturan
+- JavaScript modern (ES6+)
 
 ## Pengaturan
 
 ### Translation Switch
 Nyalakan/matikan terjemahan otomatis secara global
-
-### Your Language (Source)
-Pilih bahasa sumber pesan:
-- **Automatic (Detect)** - Deteksi otomatis (recommended)
-- 🇬🇧 English
-- 🇮🇩 Indonesia
-- 🇯🇵 Japanese (日本語)
-- 🇰🇷 Korean (한국어)
-- 🇨🇳 Chinese (中文)
-- Dan 13+ bahasa lainnya
-
-### Contact Language (Target)
-Bahasa tujuan terjemahan (default: Indonesia)
-
-### More Settings
-
-- **Auto Translate New Messages**: Terjemahkan pesan baru otomatis
-- **Show Translation Notification**: Tampilkan notifikasi (coming soon)
-- **Show Manual Translate Button**: Tampilkan tombol terjemahan manual
-
-## Teknologi
-
-- **Manifest V3**: Chrome Extension API terbaru
-- **Google Translate API**: Terjemahan gratis via gtx endpoint
-- **MutationObserver**: Deteksi real-time DOM changes
-- **Chrome Storage API**: Persistent settings
-- **Modern JavaScript**: ES6+ features
 
 ## 📋 File Structure
 
@@ -112,34 +71,22 @@ Discord-Translator-Chat/
 └── README.md           # Documentation
 ```
 
-## 🐛 Known Issues & Limitations
-
-1. **Rate Limiting**: Google Translate API mungkin membatasi request berlebihan
-2. **Discord Updates**: Perubahan struktur DOM Discord bisa mempengaruhi fungsi
-3. **Complex Messages**: Pesan dengan format kompleks mungkin tidak terdeteksi
-4. **Reply Messages**: Beberapa pesan reply mungkin perlu terjemahan manual
+## Known Issues & Limitations
+- Rentan terhadap perubahan struktur DOM Discord
+- Kemungkinan rate limit dari Google Translate jika terlalu banyak pesan
+- Beberapa pesan dengan format kompleks mungkin memerlukan terjemahan manual
 
 ## 🔄 Changelog
+**Version 2.0.0** (2026-05-03)
+- Penambahan tombol terjemahan manual
+- Perbaikan deteksi dan penanganan pesan reply/quote
+- Optimalisasi performa dan kode
+- Perbaikan berbagai bug
 
-### Version 2.0
-- ✅ Penambahan tombol manual translate
-- ✅ Fix bug terjemahan pesan reply
-- ✅ Improve detection algorithm
-- ✅ UI/UX improvements
-- ✅ Code optimization
-
-### Version 1.0
-- ✅ Auto translation
-- ✅ Multi-language support
-- ✅ Settings panel
-- ✅ Basic functionality
+**Version 1.0.0** (2026-04-20)
+- Rilis awal dengan fitur terjemahan otomatis
+- Dukungan multi bahasa
+- Panel pengaturan dasar
 
 ## License
-
 Distributed under the MIT License. See `LICENSE` for more information.
-
-## Acknowledgments
-
-- Google Translate API untuk layanan terjemahan
-- Discord untuk platform chat
-- Chrome Extension API documentation
