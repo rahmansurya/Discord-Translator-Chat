@@ -6,15 +6,14 @@ Extension Chrome untuk menerjemahkan chat Discord secara otomatis ke berbagai ba
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-orange)
 
-## Fitur Utama
+## Fitur
 
 - **Terjemahan Otomatis**: Menerjemahkan pesan Discord secara real-time ke bahasa yang diinginkan
-- **Dukungan Banyak Bahasa**: Mendukung puluhan bahasa (Google Translate / DeepL / LibreTranslate)
-- **Terjemahan Manual**: Tombol terjemahan khusus untuk pesan reply dan quote
+- **Dukungan Banyak Bahasa**: Mendukung banyak bahasa 
 - **Toggle On/Off**: Mudah mengaktifkan atau menonaktifkan terjemahan
 - **Pengaturan Bahasa**: Pilih bahasa target dengan mudah
 - **Performa Ringan**: Tidak memperlambat Discord
-- **UI yang Bersih**: Desain terjemahan yang rapi dan mudah dibaca
+- **UI Bersih**: Desain terjemahan yang rapi dan mudah dibaca
 
 ### Panel Pengaturan
 Extension menyediakan panel pengaturan sederhana dengan fitur:
@@ -65,14 +64,6 @@ Discord-Translator-Chat/
 ├── icon128.png         # Extension icon
 └── README.md           # Documentation
 ```
-
-## Known Issues & Limitations
-
-- Hanya berfungsi di Discord Web (belum bisa di aplikasi Desktop)
-- Kadang lambat jika koneksi internet lemah atau terlalu banyak chat
-- Bisa terganggu jika Discord melakukan update besar
-- Tidak bisa menerjemahkan emoji, gambar, atau file
-- Terjemahan hilang jika halaman di-refresh
 
 ## Changelog
 **Version 2.0.0** (2026-05-03)
