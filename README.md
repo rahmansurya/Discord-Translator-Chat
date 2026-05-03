@@ -24,7 +24,7 @@ Extension menyediakan panel pengaturan sederhana dengan fitur:
 
 ## Instalasi
 
-### ### Metode 1: Install dari Chrome Web Store 
+### Metode 1: Install dari Chrome Web Store 
 *Coming soon...*
 
 ### Metode 2: Install Manual (Developer Mode)
@@ -53,12 +53,7 @@ Extension akan secara otomatis menerjemahkan pesan baru. Untuk pesan reply atau 
 - Chrome Storage API untuk menyimpan pengaturan
 - JavaScript modern (ES6+)
 
-## Pengaturan
-
-### Translation Switch
-Nyalakan/matikan terjemahan otomatis secara global
-
-## 📋 File Structure
+## Struktur File
 
 ```
 Discord-Translator-Chat/
@@ -72,14 +67,17 @@ Discord-Translator-Chat/
 ```
 
 ## Known Issues & Limitations
-- Rentan terhadap perubahan struktur DOM Discord
-- Kemungkinan rate limit dari Google Translate jika terlalu banyak pesan
-- Beberapa pesan dengan format kompleks mungkin memerlukan terjemahan manual
 
-## 🔄 Changelog
+- Hanya berfungsi di Discord Web (belum bisa di aplikasi Desktop)
+- Kadang lambat jika koneksi internet lemah atau terlalu banyak chat
+- Bisa terganggu jika Discord melakukan update besar
+- Tidak bisa menerjemahkan emoji, gambar, atau file
+- Terjemahan hilang jika halaman di-refresh
+
+## Changelog
 **Version 2.0.0** (2026-05-03)
 - Penambahan tombol terjemahan manual
-- Perbaikan deteksi dan penanganan pesan reply/quote
+- Perbaikan deteksi dan penanganan pesan
 - Optimalisasi performa dan kode
 - Perbaikan berbagai bug
 
